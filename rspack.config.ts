@@ -20,7 +20,8 @@ export default defineConfig({
       },
       {
         test: /\.css$/,
-        type: 'css/auto',
+        use: ['postcss-loader'],
+        type: 'css',
       },
       {
         test: /\.(?:js|jsx|mjs|cjs|ts|tsx|mts|cts)$/,

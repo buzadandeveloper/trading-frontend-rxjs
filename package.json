@@ -4,17 +4,31 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "rspack build",
-    "dev": "rspack dev",
+    "dev": "concurrently \"pnpm:dev:rspack\" \"pnpm:dev:ts\"",
+    "dev:rspack": "rspack dev",
+    "dev:ts": "tsc -b --watch",
+    "build": "pnpm lint && pnpm type:check && pnpm circular:check && rspack build",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type:check": "tsc -b",
+    "circular:check": "madge --circular --extensions ts,tsx src/",
     "lint": "rslint",
     "preview": "rspack preview"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "concurrently": "10.0.4",
+    "lefthook": "2.1.10",
+    "madge": "8.0.0",
+    "postcss": "8.5.26",
+    "postcss-loader": "8.2.1",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "tailwindcss": "4.3.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "21.2.2",
+    "@commitlint/config-conventional": "21.2.2",
     "@rslint/core": "^0.6.5",
     "@rspack/cli": "^2.1.9",
     "@rspack/core": "^2.1.9",
