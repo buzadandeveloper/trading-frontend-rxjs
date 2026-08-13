@@ -1,25 +1,31 @@
 {
   "compilerOptions": {
+    /* App */
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "jsx": "react-jsx",
-    "target": "ES2022",
-    "types": ["node"],
-    "noEmit": true,
-    "skipLibCheck": true,
     "useDefineForClassFields": true,
     "allowJs": true,
 
-    /* modules */
+    /* Node */
+    "types": ["node"],
+
+    /* Common */
+    "target": "ES2022",
+    "noEmit": true,
+    "skipLibCheck": true,
+
+    /* Modules */
     "resolveJsonModule": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
 
-    /* type checking */
+    /* Type checking */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+
+  "include": ["src", "rspack.config.ts"]
 }
