@@ -1,0 +1,30 @@
+{
+  "name": "trading-frontend-rxjs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "rspack build",
+    "dev": "rspack dev",
+    "format": "prettier --write .",
+    "lint": "rslint",
+    "preview": "rspack preview"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@rslint/core": "^0.6.5",
+    "@rspack/cli": "^2.1.9",
+    "@rspack/core": "^2.1.9",
+    "@rspack/dev-server": "^2.2.0",
+    "@rspack/plugin-react-refresh": "^2.0.2",
+    "@types/node": "26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "prettier": "^3.9.5",
+    "react-refresh": "^0.18.0",
+    "typescript": "^6.0.3"
+  }
+}
