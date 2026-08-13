@@ -13,7 +13,8 @@
     "type:check": "tsc -b",
     "circular:check": "madge --circular --extensions ts,tsx src/",
     "lint": "rslint",
-    "preview": "rspack preview"
+    "preview": "rspack preview",
+    "prepare": "lefthook install"
   },
   "dependencies": {
     "@tailwindcss/postcss": "4.3.3",
