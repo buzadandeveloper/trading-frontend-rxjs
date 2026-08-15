@@ -18,13 +18,17 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "4.3.3",
+    "clsx": "2.1.1",
     "concurrently": "10.0.4",
     "lefthook": "2.1.10",
     "madge": "8.0.0",
+    "observable-hooks": "4.2.4",
     "postcss": "8.5.26",
     "postcss-loader": "8.2.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "rxjs": "7.8.2",
+    "tailwind-merge": "3.6.0",
     "tailwindcss": "4.3.3"
   },
   "devDependencies": {
@@ -41,5 +45,19 @@
     "prettier": "^3.9.5",
     "react-refresh": "^0.18.0",
     "typescript": "^6.0.3"
+  },
+  "imports": {
+    "#app": "./src/app/index",
+    "#components": "./src/components/index",
+    "#constants": "./src/constants/index",
+    "#hooks": "./src/hooks/index",
+    "#icons": "./src/icons/index",
+    "#layouts": "./src/layouts/index",
+    "#lib": "./src/lib/index",
+    "#utils": "./src/utils/index",
+    "#pages": "./src/pages/index",
+    "#service/*": "./src/service/*",
+    "#service": "./src/service/index",
+    "#types": "./src/types/index"
   }
 }
