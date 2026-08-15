@@ -1,5 +1,5 @@
 import { wsClient } from '#lib';
-import { ChartConfig, KlineEvent } from './kline-types';
+import type { ChartConfig, KlineEvent } from './kline-types';
 import { BehaviorSubject, map, switchMap } from 'rxjs';
 
 class KlineWs {
