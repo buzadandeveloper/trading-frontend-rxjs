@@ -1,6 +1,7 @@
 import { defineConfig } from '@rspack/cli';
 import { rspack, type SwcLoaderOptions } from '@rspack/core';
 import { ReactRefreshRspackPlugin } from '@rspack/plugin-react-refresh';
+import * as process from 'node:process';
 
 process.loadEnvFile?.('.env');
 
@@ -50,6 +51,7 @@ export default defineConfig({
   plugins: [
     new rspack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
       'process.env.WS_URL': JSON.stringify(process.env.WS_URL),
     }),
     new rspack.HtmlRspackPlugin({

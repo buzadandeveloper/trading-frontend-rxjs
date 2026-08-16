@@ -28,7 +28,7 @@
 
     /* Path aliases */
     "paths": {
-      "#app": ["./src/app/index"],
+      "#app/*": ["./src/app/*"],
       "#components": ["./src/components/index"],
       "#constants": ["./src/constants/index"],
       "#hooks": ["./src/hooks/index"],
